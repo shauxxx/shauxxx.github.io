@@ -16,18 +16,22 @@
       body {
         padding-top: 20px;
       }
-      .footer {
-        margin-top: 80px;
-        padding: 20px 0;
-        background: #f8f9fa;
-      }
+      /* Стили для картинок, чтобы они были одинакового размера и не растягивались */
       .gallery-img {
         width: 100%;
-        height: 180px;
-        object-fit: cover;
+        height: 200px;
+        object-fit: cover; /* Обрезает картинку, сохраняя пропорции */
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
       }
+      /* Для сетки 6 по 1 делаем картинки чуть меньше по высоте */
       .col-md-2 .gallery-img {
-        height: 120px;
+        height: 150px;
+      }
+      .footer {
+        margin-top: 50px;
+        padding: 20px 0;
+        background: #f8f9fa;
       }
     </style>
   </head>
@@ -66,28 +70,10 @@
 
       <h1 class="mt-4">Породы кошек и виды котов</h1>
       <p class="lead">Мир кошек разнообразен: от пушистых мейн-кунов до изящных сиамских кошек.</p>
-
       <hr>
 
-      <!-- Блок с текстом -->
-      <section>
-        <h2>Немного о кошках</h2>
-        <p>
-          Кошки — одни из самых популярных домашних животных. У каждой породы есть свои
-          особенности: характер, размер, длина шерсти и требования к уходу.
-        </p>
-
-        <div class="alert alert-info" role="alert">
-          Это блочный элемент <code>&lt;div&gt;</code> с классом Bootstrap <code>alert</code>.
-        </div>
-
-        <blockquote class="blockquote">
-          <p class="mb-0">«Кошки — это маленькие львы, которые живут с нами дома».</p>
-        </blockquote>
-      </section>
-
-      <!-- Списки -->
-      <section>
+      <!-- Списки по заданию -->
+      <section class="mb-5">
         <h2>Популярные породы</h2>
         <ul>
           <li>Мейн-кун</li>
@@ -109,100 +95,86 @@
       <hr>
 
       <!-- Сетка 2 по 3: 2 колонки, 3 ряда -->
-      <section>
-        <h2>Галерея: 2 колонки × 3 ряда</h2>
+      <section class="mb-5">
+        <h2 class="mb-4">Галерея: 2 колонки × 3 ряда</h2>
         <div class="row">
           <div class="col-6 col-md-6 mb-4">
-            <img src="https://loremflickr.com/600/400/cat?lock=1"
-                 class="img-fluid gallery-img" alt="Кошка 1">
+            <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=600&h=400&fit=crop" class="gallery-img" alt="Кошка 1" loading="lazy">
           </div>
           <div class="col-6 col-md-6 mb-4">
-            <img src="https://loremflickr.com/600/400/cat?lock=2"
-                 class="img-fluid gallery-img" alt="Кошка 2">
+            <img src="https://images.unsplash.com/photo-1573865526739-10659fec78a5?w=600&h=400&fit=crop" class="gallery-img" alt="Кошка 2" loading="lazy">
           </div>
           <div class="col-6 col-md-6 mb-4">
-            <img src="https://loremflickr.com/600/400/cat?lock=3"
-                 class="img-fluid gallery-img" alt="Кошка 3">
+            <img src="https://images.unsplash.com/photo-1495360010541-f48722b34f7d?w=600&h=400&fit=crop" class="gallery-img" alt="Кошка 3" loading="lazy">
           </div>
           <div class="col-6 col-md-6 mb-4">
-            <img src="https://loremflickr.com/600/400/cat?lock=4"
-                 class="img-fluid gallery-img" alt="Кошка 4">
+            <img src="https://images.unsplash.com/photo-1533738363-b7f9aef128ce?w=600&h=400&fit=crop" class="gallery-img" alt="Кошка 4" loading="lazy">
           </div>
           <div class="col-6 col-md-6 mb-4">
-            <img src="https://loremflickr.com/600/400/cat?lock=5"
-                 class="img-fluid gallery-img" alt="Кошка 5">
+            <img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?w=600&h=400&fit=crop" class="gallery-img" alt="Кошка 5" loading="lazy">
           </div>
           <div class="col-6 col-md-6 mb-4">
-            <img src="https://loremflickr.com/600/400/cat?lock=6"
-                 class="img-fluid gallery-img" alt="Кошка 6">
+            <img src="https://images.unsplash.com/photo-1529778873920-4da4926a72c2?w=600&h=400&fit=crop" class="gallery-img" alt="Кошка 6" loading="lazy">
           </div>
         </div>
       </section>
+
+      <hr>
 
       <!-- Сетка 3 по 2: 3 колонки, 2 ряда -->
-      <section>
-        <h2>Галерея: 3 колонки × 2 ряда</h2>
+      <section class="mb-5">
+        <h2 class="mb-4">Галерея: 3 колонки × 2 ряда</h2>
         <div class="row">
           <div class="col-4 col-md-4 mb-4">
-            <img src="https://loremflickr.com/600/400/cat?lock=7"
-                 class="img-fluid gallery-img" alt="Кошка 7">
+            <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=600&h=400&fit=crop" class="gallery-img" alt="Кошка 7" loading="lazy">
           </div>
           <div class="col-4 col-md-4 mb-4">
-            <img src="https://loremflickr.com/600/400/cat?lock=8"
-                 class="img-fluid gallery-img" alt="Кошка 8">
+            <img src="https://images.unsplash.com/photo-1573865526739-10659fec78a5?w=600&h=400&fit=crop" class="gallery-img" alt="Кошка 8" loading="lazy">
           </div>
           <div class="col-4 col-md-4 mb-4">
-            <img src="https://loremflickr.com/600/400/cat?lock=9"
-                 class="img-fluid gallery-img" alt="Кошка 9">
+            <img src="https://images.unsplash.com/photo-1495360010541-f48722b34f7d?w=600&h=400&fit=crop" class="gallery-img" alt="Кошка 9" loading="lazy">
           </div>
           <div class="col-4 col-md-4 mb-4">
-            <img src="https://loremflickr.com/600/400/cat?lock=10"
-                 class="img-fluid gallery-img" alt="Кошка 10">
+            <img src="https://images.unsplash.com/photo-1533738363-b7f9aef128ce?w=600&h=400&fit=crop" class="gallery-img" alt="Кошка 10" loading="lazy">
           </div>
           <div class="col-4 col-md-4 mb-4">
-            <img src="https://loremflickr.com/600/400/cat?lock=11"
-                 class="img-fluid gallery-img" alt="Кошка 11">
+            <img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?w=600&h=400&fit=crop" class="gallery-img" alt="Кошка 11" loading="lazy">
           </div>
           <div class="col-4 col-md-4 mb-4">
-            <img src="https://loremflickr.com/600/400/cat?lock=12"
-                 class="img-fluid gallery-img" alt="Кошка 12">
+            <img src="https://images.unsplash.com/photo-1529778873920-4da4926a72c2?w=600&h=400&fit=crop" class="gallery-img" alt="Кошка 12" loading="lazy">
           </div>
         </div>
       </section>
 
+      <hr>
+
       <!-- Сетка 6 по 1: 6 колонок, 1 ряд -->
-      <section>
-        <h2>Галерея: 6 колонок × 1 ряд</h2>
+      <section class="mb-5">
+        <h2 class="mb-4">Галерея: 6 колонок × 1 ряд</h2>
         <div class="row">
           <div class="col-4 col-md-2 mb-4">
-            <img src="https://loremflickr.com/600/400/cat?lock=13"
-                 class="img-fluid gallery-img" alt="Кошка 13">
+            <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=600&h=400&fit=crop" class="gallery-img" alt="Кошка 13" loading="lazy">
           </div>
           <div class="col-4 col-md-2 mb-4">
-            <img src="https://loremflickr.com/600/400/cat?lock=14"
-                 class="img-fluid gallery-img" alt="Кошка 14">
+            <img src="https://images.unsplash.com/photo-1573865526739-10659fec78a5?w=600&h=400&fit=crop" class="gallery-img" alt="Кошка 14" loading="lazy">
           </div>
           <div class="col-4 col-md-2 mb-4">
-            <img src="https://loremflickr.com/600/400/cat?lock=15"
-                 class="img-fluid gallery-img" alt="Кошка 15">
+            <img src="https://images.unsplash.com/photo-1495360010541-f48722b34f7d?w=600&h=400&fit=crop" class="gallery-img" alt="Кошка 15" loading="lazy">
           </div>
           <div class="col-4 col-md-2 mb-4">
-            <img src="https://loremflickr.com/600/400/cat?lock=16"
-                 class="img-fluid gallery-img" alt="Кошка 16">
+            <img src="https://images.unsplash.com/photo-1533738363-b7f9aef128ce?w=600&h=400&fit=crop" class="gallery-img" alt="Кошка 16" loading="lazy">
           </div>
           <div class="col-4 col-md-2 mb-4">
-            <img src="https://loremflickr.com/600/400/cat?lock=17"
-                 class="img-fluid gallery-img" alt="Кошка 17">
+            <img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?w=600&h=400&fit=crop" class="gallery-img" alt="Кошка 17" loading="lazy">
           </div>
           <div class="col-4 col-md-2 mb-4">
-            <img src="https://loremflickr.com/600/400/cat?lock=18"
-                 class="img-fluid gallery-img" alt="Кошка 18">
+            <img src="https://images.unsplash.com/photo-1529778873920-4da4926a72c2?w=600&h=400&fit=crop" class="gallery-img" alt="Кошка 18" loading="lazy">
           </div>
         </div>
       </section>
 
       <!-- Ссылки из задания -->
-      <section>
+      <section class="mb-5">
         <h2>Полезные ссылки</h2>
         <ul>
           <li>
@@ -220,6 +192,7 @@
 
     </main>
 
+    <!-- Подвал -->
     <footer class="footer">
       <div class="container text-center">
         <span class="text-muted">© 2026 Cats. Все права защищены.</span>
